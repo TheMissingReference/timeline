@@ -1,3 +1,263 @@
+/* /Pages/index.razor.rz.scp.css */
+/*
+!!!!
+This pen is being refactored
+!!!!
+*/
+
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+.r-title[b-0wdo12zik2]{
+    margin-top: var(--rTitleMarginTop, 0) !important;
+    margin-bottom: var(--rTitleMarginBottom, 0) !important;
+}
+
+
+p:not([class])[b-0wdo12zik2]{
+    line-height: var(--cssTypographyLineHeight, 1.78);
+    margin-top: var(--cssTypographyBasicMargin, 1em);
+    margin-bottom: 0;
+}
+
+p:not([class]):first-child[b-0wdo12zik2]{
+    margin-top: 0;
+}
+
+/*
+text component
+*/
+
+.text[b-0wdo12zik2]{
+    display: var(--textDisplay, inline-flex);
+    font-size: var(--textFontSize, 1rem);
+}
+
+/*
+time component
+*/
+
+/*
+core styles
+*/
+
+.time[b-0wdo12zik2]{
+    display: var(--timeDisplay, inline-flex);
+}
+
+/*
+extensions
+*/
+
+.time__month[b-0wdo12zik2]{
+    margin-left: var(--timelineMounthMarginLeft, .25em);
+}
+
+/*
+skin
+*/
+
+.time[b-0wdo12zik2]{
+    padding: var(--timePadding, .25rem 1.25rem .25rem);
+    background-color: var(--timeBackgroundColor, #f0f0f0);
+
+    font-size: var(--timeFontSize, .75rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, currentColor);
+}
+
+/*
+card component
+*/
+
+/*
+core styles
+*/
+
+.card[b-0wdo12zik2]{
+    padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+}
+
+.card__content[b-0wdo12zik2]{
+    margin-top: var(--cardContentMarginTop, .5rem);
+}
+
+/*
+skin
+*/
+
+.card[b-0wdo12zik2]{
+    border-radius: var(--timelineCardBorderRadius, 2px);
+    border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+    box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+    background-color: var(--timelineCardBackgroundColor, #fff);
+}
+
+/*
+extensions
+*/
+
+.card__title[b-0wdo12zik2]{
+    --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+    font-size: var(--cardTitleFontSize, 1.25rem);
+}
+
+/*
+=====
+CORE STYLES
+=====
+*/
+
+.timeline[b-0wdo12zik2]{
+    display: var(--timelineDisplay, grid);
+    grid-row-gap: var(--timelineGroupsGap, 2rem);
+}
+
+/*
+1. If timeline__year isn't displaed the gap between it and timeline__cards isn't displayed too
+*/
+
+.timeline__year[b-0wdo12zik2]{
+    margin-bottom: 1.25rem; /* 1 */
+}
+
+.timeline__cards[b-0wdo12zik2]{
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+}
+
+
+/*
+=====
+SKIN
+=====
+*/
+
+.timeline[b-0wdo12zik2]{
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.timeline__year[b-0wdo12zik2]{
+    --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+
+.timeline__card[b-0wdo12zik2]{
+    position: relative;
+    margin-left: var(--timelineCardLineGap, 1rem);
+}
+
+/*
+1. Stoping cut box shadow
+*/
+
+.timeline__cards[b-0wdo12zik2]{
+    overflow: hidden;
+    padding-top: .25rem; /* 1 */
+    padding-bottom: .25rem; /* 1 */
+}
+
+.timeline__card[b-0wdo12zik2]::before{
+    content: "";
+    width: 100%;
+    height: var(--timelineCardLineWidth, 2px);
+    background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+
+    position: absolute;
+    top: var(--timelineCardLineTop, 1rem);
+    left: -50%;
+    z-index: -1;
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+/**/
+.timeline[b-0wdo12zik2]{
+    --timelineMainColor: #4557bb;
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+body[b-0wdo12zik2]{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    color: #222;
+
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+p[b-0wdo12zik2]{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+p:last-child[b-0wdo12zik2]{
+    margin-bottom: 0;
+}
+
+.page[b-0wdo12zik2]{
+    max-width: 47rem;
+    padding: 5rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.substack[b-0wdo12zik2]{
+    border:1px solid #EEE;
+    background-color: #fff;
+    width: 100%;
+    max-width: 480px;
+    height: 280px;
+    margin: 1rem auto;;
+}
+
+
+.linktr[b-0wdo12zik2]{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-align: center;
+}
+
+.linktr__goal[b-0wdo12zik2]{
+    background-color: rgb(209, 246, 255);
+    color: rgb(8, 49, 112);
+    box-shadow: rgb(8 49 112 / 24%) 0px 2px 8px 0px;
+    border-radius: 2rem;
+    padding: .75rem 1.5rem;
+}
+
+.r-link[b-0wdo12zik2]{
+    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+    --uirLinkTextColor: var(--rLinkTextColor);
+    --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+
+    display: var(--uirLinkDisplay) !important;
+    color: var(--uirLinkTextColor) !important;
+    text-decoration: var(--uirLinkTextDecoration) !important;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-f53x4mk3ra] {
     position: relative;
@@ -142,4 +402,264 @@ main[b-f53x4mk3ra] {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+}
+/* /Shared/TImeGroup.razor.rz.scp.css */
+/*
+!!!!
+This pen is being refactored
+!!!!
+*/
+
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+.r-title[b-du43wx07vh]{
+    margin-top: var(--rTitleMarginTop, 0) !important;
+    margin-bottom: var(--rTitleMarginBottom, 0) !important;
+}
+
+
+p:not([class])[b-du43wx07vh]{
+    line-height: var(--cssTypographyLineHeight, 1.78);
+    margin-top: var(--cssTypographyBasicMargin, 1em);
+    margin-bottom: 0;
+}
+
+p:not([class]):first-child[b-du43wx07vh]{
+    margin-top: 0;
+}
+
+/*
+text component
+*/
+
+.text[b-du43wx07vh]{
+    display: var(--textDisplay, inline-flex);
+    font-size: var(--textFontSize, 1rem);
+}
+
+/*
+time component
+*/
+
+/*
+core styles
+*/
+
+.time[b-du43wx07vh]{
+    display: var(--timeDisplay, inline-flex);
+}
+
+/*
+extensions
+*/
+
+.time__month[b-du43wx07vh]{
+    margin-left: var(--timelineMounthMarginLeft, .25em);
+}
+
+/*
+skin
+*/
+
+.time[b-du43wx07vh]{
+    padding: var(--timePadding, .25rem 1.25rem .25rem);
+    background-color: var(--timeBackgroundColor, #f0f0f0);
+
+    font-size: var(--timeFontSize, .75rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, currentColor);
+}
+
+/*
+card component
+*/
+
+/*
+core styles
+*/
+
+.card[b-du43wx07vh]{
+    padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+}
+
+.card__content[b-du43wx07vh]{
+    margin-top: var(--cardContentMarginTop, .5rem);
+}
+
+/*
+skin
+*/
+
+.card[b-du43wx07vh]{
+    border-radius: var(--timelineCardBorderRadius, 2px);
+    border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+    box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+    background-color: var(--timelineCardBackgroundColor, #fff);
+}
+
+/*
+extensions
+*/
+
+.card__title[b-du43wx07vh]{
+    --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+    font-size: var(--cardTitleFontSize, 1.25rem);
+}
+
+/*
+=====
+CORE STYLES
+=====
+*/
+
+.timeline[b-du43wx07vh]{
+    display: var(--timelineDisplay, grid);
+    grid-row-gap: var(--timelineGroupsGap, 2rem);
+}
+
+/*
+1. If timeline__year isn't displaed the gap between it and timeline__cards isn't displayed too
+*/
+
+.timeline__year[b-du43wx07vh]{
+    margin-bottom: 1.25rem; /* 1 */
+}
+
+.timeline__cards[b-du43wx07vh]{
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+}
+
+
+/*
+=====
+SKIN
+=====
+*/
+
+.timeline[b-du43wx07vh]{
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.timeline__year[b-du43wx07vh]{
+    --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+
+.timeline__card[b-du43wx07vh]{
+    position: relative;
+    margin-left: var(--timelineCardLineGap, 1rem);
+}
+
+/*
+1. Stoping cut box shadow
+*/
+
+.timeline__cards[b-du43wx07vh]{
+    overflow: hidden;
+    padding-top: .25rem; /* 1 */
+    padding-bottom: .25rem; /* 1 */
+}
+
+.timeline__card[b-du43wx07vh]::before{
+    content: "";
+    width: 100%;
+    height: var(--timelineCardLineWidth, 2px);
+    background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+
+    position: absolute;
+    top: var(--timelineCardLineTop, 1rem);
+    left: -50%;
+    z-index: -1;
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+/**/
+.timeline[b-du43wx07vh]{
+    --timelineMainColor: #4557bb;
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+body[b-du43wx07vh]{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    color: #222;
+
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+p[b-du43wx07vh]{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+p:last-child[b-du43wx07vh]{
+    margin-bottom: 0;
+}
+
+.page[b-du43wx07vh]{
+    max-width: 47rem;
+    padding: 5rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.substack[b-du43wx07vh]{
+    border:1px solid #EEE;
+    background-color: #fff;
+    width: 100%;
+    max-width: 480px;
+    height: 280px;
+    margin: 1rem auto;;
+}
+
+
+.linktr[b-du43wx07vh]{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-align: center;
+}
+
+.linktr__goal[b-du43wx07vh]{
+    background-color: rgb(209, 246, 255);
+    color: rgb(8, 49, 112);
+    box-shadow: rgb(8 49 112 / 24%) 0px 2px 8px 0px;
+    border-radius: 2rem;
+    padding: .75rem 1.5rem;
+}
+
+.r-link[b-du43wx07vh]{
+    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+    --uirLinkTextColor: var(--rLinkTextColor);
+    --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+
+    display: var(--uirLinkDisplay) !important;
+    color: var(--uirLinkTextColor) !important;
+    text-decoration: var(--uirLinkTextDecoration) !important;
 }
