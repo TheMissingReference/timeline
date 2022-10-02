@@ -222,7 +222,10 @@ p:last-child{
     margin-right: auto;
 }
 
-
+.modal-image{
+    display: flex;
+    justify-content: center;
+}
 .substack{
     border:1px solid #EEE;
     background-color: #fff;

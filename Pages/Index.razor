@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using timeline.Model
 @inject HttpClient Http
 
 <div class="page">
@@ -6,7 +7,7 @@
     
     @foreach (var t in TimelineDisplay)
     {
-      <TimeGroup Day="@t.Day" Month="@t.Month" Year="@t.Year" Content="@t.Content"/>
+      <TimeGroup Record=@t/>
     }  
         
   </div>
@@ -14,8 +15,7 @@
 
 @code
 {
-  private record TimelineGroup(string Day, string Month, string Year, string Content);
-
+  
   private TimelineGroup[] TimelineDisplay { get; set; } = {};
   
   protected override async void OnInitialized()
@@ -33,8 +33,11 @@
     {
       var time = await Http.GetStringAsync($"Timeline/{listedEvent}/time.txt");
       var parseTime = DateTime.ParseExact(time, "dd-MM-yyyy", null);
+      var title = await Http.GetStringAsync($"Timeline/{listedEvent}/title.txt");
       var content = await Http.GetStringAsync($"Timeline/{listedEvent}/content.txt");
-      timeEventList.Add(new (parseTime.Day.ToString(), parseTime.ToString("MMMM"), parseTime.Year.ToString(), content));
+      var imagePath = $"Timeline/{listedEvent}/image.png".Replace("\r", "");
+      
+      timeEventList.Add(new TimelineGroup(parseTime.Day.ToString(), parseTime.ToString("MMMM"), parseTime.Year.ToString(), title, content, imagePath));
     }
     TimelineDisplay = timeEventList.ToArray();
     StateHasChanged();
