@@ -26,7 +26,7 @@
       await 
         Http
           .GetStringAsync("Timeline/buildtimeline.txt");
-    var events = directories.Split("\r\n");
+    var events = directories.Split("\n");
 
     var timeEventList = new List<TimelineGroup>();
     foreach (var listedEvent in events)
