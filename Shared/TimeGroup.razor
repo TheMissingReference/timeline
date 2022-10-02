@@ -31,6 +31,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-image">
+        @* OnError will remove the image component if it's not found *@
         <img src= "@Record.Image" onerror="this.remove()" style="max-height: 100px; max-width: 100px"/>
       </div>
       
