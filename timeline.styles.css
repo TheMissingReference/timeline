@@ -628,7 +628,10 @@ p:last-child[b-du43wx07vh]{
     margin-right: auto;
 }
 
-
+.modal-image[b-du43wx07vh]{
+    display: flex;
+    justify-content: center;
+}
 .substack[b-du43wx07vh]{
     border:1px solid #EEE;
     background-color: #fff;
